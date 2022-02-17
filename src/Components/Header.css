@@ -1,5 +1,5 @@
-.header{
-    background-color: #1687A7;
+.header {
+    background-color: #1687a7;
     height: 10vh;
     width: 100%;
     display: flex;
@@ -7,6 +7,6 @@
     align-items: center;
 }
 
-h1{
+.header h1 {
     color: #fff;
 }

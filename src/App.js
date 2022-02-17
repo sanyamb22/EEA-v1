@@ -3,9 +3,10 @@ import React from 'react';
 import './App.css';
 import Home from './Components/Home';
 import Login from './Components/Login'
-import Signin from './Components/Signin';
 import Header from './Components/Header';
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
+import Signup from './Components/signup/Signup';
+import Political from './Components/signup/Political';
 
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/signin' element={<Signin />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/signup/pe' element={<Political />} />
       </Routes>
-    <Footer />
+    {/* <Footer /> */}
     </BrowserRouter>
     
   );

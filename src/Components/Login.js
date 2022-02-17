@@ -8,6 +8,7 @@ function Login() {
   const [userName, setName] = useState('');
   const [password, setPassword] = useState('');
 
+
   const handleClick = async (e) => {
     e.preventDefault()
     const idpass = { name: userName, pass: password }
@@ -24,7 +25,7 @@ function Login() {
     <>
       <div className='main'>
         <div className='hero-section'>
-          <img src='https://www.google.co.in/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png' />
+          <img src='https://www.google.co.in/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png' alt='i' />
         </div>
         <div className='login-form'>
           <form>
@@ -32,7 +33,7 @@ function Login() {
             <input type='text' value={userName} className='login-fields' placeholder='Username' onChange={(e) => { setName(e.target.value) }} />
             <input type='password' value={password} className='login-fields' placeholder='Password' onChange={(e) => { setPassword(e.target.value) }} />
             <button type='button' name='submit' className='login-fields' onClick={handleClick} >Login</button>
-            <Link to='/signin'><button type='button' name='signin' className='login-fields'>Signin</button></Link>
+            <Link to='/signup'><button type='button' name='signup' className='login-fields'>Signup</button></Link>
           </form>
         </div>
       </div>
