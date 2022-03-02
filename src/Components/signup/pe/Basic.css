@@ -1,0 +1,32 @@
+.main-basic-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basic-info-box{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: column;
+    height: 450px;
+    width: 600px;
+    background-color: #BFF1F475;
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 55px;
+}
+
+.basic-date{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.basic-info-box h3{
+    display: block;
+}
+
+.white{
+    background-color: #fff;
+}

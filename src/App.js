@@ -12,16 +12,16 @@ import Political from './Components/signup/Political';
 function App() {
   return (
     <BrowserRouter>
-    <Header />
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/signup/pe' element={<Political />} />
       </Routes>
-    {/* <Footer /> */}
+      {/* <Footer /> */}
     </BrowserRouter>
-    
+
   );
 }
 
