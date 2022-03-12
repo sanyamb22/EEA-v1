@@ -5,13 +5,16 @@ import Pagination from "@mui/material/Pagination";
 import Credentials from "./pe/Credentials";
 import Basic from "./pe/Basic";
 import Founder from "./pe/Founder";
-import Leader from "./pe/Leader";
+// import Leader from "./pe/Leader";
 import ProfilePic from "./pe/ProfilePic";
 import Manifesto from "./pe/Manifesto";
 import { NoEncryptionTwoTone } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import SaveIcon from '@mui/icons-material/Save';
+import axios from "../../Components/axios";
+
 
 export default function Political() {
     const [page, setPage] = useState(1);
@@ -27,10 +30,26 @@ export default function Political() {
         orgFromDate: new Date(),
         orgToDate: new Date(),
         orgProfilePic: null,
+        orgFounder: null,
+        orgLeader: null,
+        orgMember: null,
+        orgManifesto: null,
     });
 
+    const handleClick = async (e) => {
+        e.preventDefault()
+        console.log(formData)
+        try{
+          const response = await axios.post('/api/login', formData)
+          console.log(response)
+        } catch (err) {
+          console.log(`${err.message}`)
+        }
+      }
+    
+
     function goNextPage() {
-        if (page === 5) return;
+        if (page === 4) return;
         setPage((page) => page + 1);
     }
     function goBackPage() {
@@ -63,9 +82,6 @@ export default function Political() {
                         />
                     )}
                     {page === 4 && (
-                        <Leader formData={formData} setFormData={setFormData} />
-                    )}
-                    {page === 5 && (
                         <Manifesto
                             formData={formData}
                             setFormData={setFormData}
@@ -84,20 +100,29 @@ export default function Political() {
                         </Button>
                     )}
                     <Pagination
-                        count={5}
+                        count={4}
                         page={page}
                         value={page}
                         onChange={handleChange}
                         hideNextButton={true}
                         hidePrevButton={true}
                     />
-                    {page !== 5 && (
+                    {page !== 4 && (
                         <Button
                             variant="contained"
                             endIcon={<ArrowForwardIosIcon />}
                             onClick={goNextPage}
                         >
                             Next
+                        </Button>
+                    )}
+                    {page === 4 && (
+                        <Button
+                            variant="contained"
+                            endIcon={<SaveIcon />}
+                            onClick={handleClick}
+                        >
+                            Submit
                         </Button>
                     )}
                 </div>

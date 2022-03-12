@@ -1,0 +1,25 @@
+.manifesto-main-box, .upload-manifesto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manifesto-secondary-box {
+    height: 55vh;
+    width: 80%;
+    background-color: #bff1f475;
+    margin: 6vh 0px 0px 0px;
+    padding: 30px;
+}
+
+.upload-manifesto{
+    /* background-color: black; */
+    height: 80%;
+    width: auto;
+    /* flex-direction: column; */
+}
+
+#manifesto-done {
+    margin-top: 30px;
+    text-align: center;
+}

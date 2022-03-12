@@ -1,0 +1,23 @@
+.main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.founders,
+.leaders,
+.members {
+    height: 250px;
+    width: 500px;
+    background-color: #bff1f475;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.founder-icons, .leader-icons, .member-icons {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 0px;
+}
